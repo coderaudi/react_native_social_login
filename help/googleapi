@@ -1,0 +1,20 @@
+1. go to firebase and create your application 
+2. provide all the details and download the google-service.json
+3. add google-service.json to root of andorid/app 
+4. go to npm and install npm i @react-native-community/google-signin --save
+
+// npm is depend on the RN vesion 
+// how to check RN version got to package .son and check for react-native
+// in my case its  "react-native": "0.63.2"
+// so which is helpful for me => @react-native-community/google-signin
+
+For RN >= 0.60 please use version 3 installed from @react-native-community/google-signin
+For RN <= 0.59 use version 2 installed from react-native-google-signin
+
+// before going to componenet level we need to make some changes depending to andorid
+
+// url to follow => https://github.com/react-native-community/google-signin/blob/HEAD/docs/android-guide.md
+
+
+5. linking / autolinkin as we are on RN >60 autolinkin is supported 
+6. manula linking =>
