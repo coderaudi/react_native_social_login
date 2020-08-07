@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "142496215537",
+    "firebase_url": "https://e-bucket-279718.firebaseio.com",
+    "project_id": "e-bucket-279718",
+    "storage_bucket": "e-bucket-279718.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142496215537:android:edc9849d2a11db5d1b5450",
+        "android_client_info": {
+          "package_name": "com.espl.ebucket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142496215537-7s74fn0o9cbhq6vd0pgppq2up4u245h1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXxH23UF7aLEh7_K7K0OzLsXNbFtM1HPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142496215537-7s74fn0o9cbhq6vd0pgppq2up4u245h1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

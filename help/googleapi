@@ -17,4 +17,92 @@ For RN <= 0.59 use version 2 installed from react-native-google-signin
 
 
 5. linking / autolinkin as we are on RN >60 autolinkin is supported 
-6. manula linking =>
+6. manula linking =>  react-native link react-native-google-signin
+7. run the in root cmd =>    react-native link @react-native-community/google-signin
+
+================cmd===cmd===cmd===cmd===cmd========> once you done will get in cmd
+ release.
+Autolinking documentation: https://github.com/react-native-community/cli/blob/master/docs/autolinking.md
+info Linking "@react-native-community/google-signin" iOS dependency
+info iOS module "@react-native-community/google-signin" has been successfully linked
+info Linking "@react-native-community/google-signin" Android dependency
+info Android module "@react-native-community/google-signin" has been successfully linked
+
+C:\audi_\Android\react-native-googlelogin\googlelogin>
+
+================cmd===cmd===cmd===cmd===cmd========> once you done will get in cmd
+
+8. there are few changes in settings.gradle and mainapplication.java done by the linking.
+
+9. Update android/build.gradle with
+
+buildscript {
+    ext {
+        buildToolsVersion = "27.0.3"
+        minSdkVersion = 16
+        compileSdkVersion = 27
+        targetSdkVersion = 26
+        supportLibVersion = "27.1.1"
+        googlePlayServicesAuthVersion = "16.0.1" // <--- use this version or newer
+    }
+...
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.2' // <--- use this version or newer
+        classpath 'com.google.gms:google-services:4.1.0' // <--- use this version or newer
+    }
+...
+allprojects {
+    repositories {
+        mavenLocal()
+        google() // <--- make sure this is included
+        jcenter()
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url "$rootDir/../node_modules/react-native/android"
+        }
+    }
+}
+
+
+
+10.  Update android/app/build.gradle with
+
+...
+dependencies {
+
+    // impt for google signin 
+   //  implementation(project(":react-native-google-signin"))  only when RN <60
+
+    // 
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "com.android.support:appcompat-v7:23.0.1"
+    implementation "com.facebook.react:react-native:+"
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0' // <-- add this; newer versions should work too
+}
+
+apply plugin: 'com.google.gms.google-services' // <--- this should be the last line
+
+
+11.  at the time of linking setting.gradle updated so check below lines are there
+
+
+include ':react-native-google-signin', ':app'
+project(':react-native-google-signin').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-community/google-signin/android')
+
+
+12. android/app/serc/main/java/MainApplication.java  check the mainapplication.java file 
+
+ // import is there 
+
+import co.apptailor.googlesignin.RNGoogleSigninPackage;
+
+
+//   new RNGoogleSigninPackage()  
+// no need to add in the package because we used react-native link ==> so its addeded by autoliking
+
+
+// to clean in case error or unable to compile
+
+cd android
+./gradlew clean
+now react-native run-android

@@ -2,10 +2,15 @@
 
 buildscript {
     ext {
-        buildToolsVersion = "29.0.2"
-        minSdkVersion = 16
-        compileSdkVersion = 29
-        targetSdkVersion = 29
+    
+         googlePlayServicesVersion = "+" // default: "+" req to googlesignin
+         firebaseMessagingVersion = "+" // default: "+"
+         buildToolsVersion = "28.0.3"
+         minSdkVersion = 16
+         compileSdkVersion = 28
+         targetSdkVersion = 28
+         androidXCore = "1.0.2"
+
     }
     repositories {
         google()
@@ -13,6 +18,7 @@ buildscript {
     }
     dependencies {
         classpath("com.android.tools.build:gradle:3.5.3")
+        classpath ('com.google.gms:google-services:4.1.0') // <--- use this version or newer
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -30,7 +36,7 @@ allprojects {
             url("$rootDir/../node_modules/jsc-android/dist")
         }
 
-        google()
+        google()  // imp form google signin
         jcenter()
         maven { url 'https://www.jitpack.io' }
     }
