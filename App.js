@@ -24,6 +24,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import GoogleLogin from './screens/googlelogin';
+import FacebookLogin from './screens/facebooklogin';
 
 const App = () => {
   return (
@@ -42,6 +43,11 @@ const App = () => {
           <View style={styles.body}>
             <GoogleLogin />
           </View>
+
+          <View>
+            <FacebookLogin />
+          </View>
+
         </ScrollView>
       </SafeAreaView>
     </>

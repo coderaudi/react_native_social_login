@@ -1,0 +1,51 @@
+
+1. add npm  i react-native-fbsdk --save
+2. link the npm => open cmd //=> react-native link react-native-fbsdk
+
+
+====cmd ==cmd===cmd
+
+warn Calling react-native link [packageName] is deprecated in favor of autolinking. It will be removed in the next major release.
+Autolinking documentation: https://github.com/react-native-community/cli/blob/master/docs/autolinking.md
+info Linking "react-native-fbsdk" iOS dependency
+info iOS module "react-native-fbsdk" has been successfully linked
+info Linking "react-native-fbsdk" Android dependency
+info Android module "react-native-fbsdk" has been successfully linked
+
+C:\audi_\Android\react-native-googlelogin\googlelogin>
+=======cmd ==cmd===cmd
+
+
+3. android/app/src/main/java/com/mainapplication.java
+=> open and import 
+import com.facebook.reactnative.androidsdk.FBSDKPackage
+
+4. Add the Maven Central Repository to build.gradle before dependencies:
+repositories {
+        mavenCentral()
+    }
+
+
+5. Open your strings.xml file, for example: /app/src/main/res/values/strings.xml.
+
+app your fbid     <string name="facebook_app_id">1853627951564328</string>
+
+6. 3. Open AndroidManifest.xml.
+
+
+
+
+7. add your package names 
+
+Tell us about your Android project
+Package Name
+Your package name uniquely identifies your Android app. We use this to let people download your app from Google Play if they don't have it installed. You can find this in your Android Manifest
+com.googlelogin  <=== add your
+Default Activity Class Name
+This is the fully qualified class name of the activity that handles deep linking. We use this when we deep link into your app from the Facebook app. You can also find this in your Android Manifest
+com.googlelogin.MainApplication <== add 
+
+
+8 generate the key hash for your development with the help of openssl / 
+cmd => 
+keytool -exportcert -alias androiddebugkey -keystore %HOMEPATH%\.android\debug.keystore | openssl sha1 -binary | openssl base64

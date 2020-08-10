@@ -146,6 +146,10 @@ Subject Public Key Algorithm: 2048-bit RSA key
 ====cmd====cmd====cmd====cmd
 
 
+
+==> tip 1st create the projet and then 
+ ==> use clientId : 831416916801-t7hbe5amaja6fej57rmp6es2dg1orgmm.apps.googleusercontent.com
+
 7. enter your SHA-1 
 
 
@@ -177,3 +181,9 @@ Firebase or the responsible authority should be informed about this. This is a m
 -Try logging in now and it should work.
 
 this solution from stackoverflow worked for me.
+
+
+Enable OAuth on https://console.developers.google.com
+Copy and paste your SH1 while enabling
+Enable Google sign in on firebase authentication
+Use Oauth Client_Id instead of your WebClient ID
