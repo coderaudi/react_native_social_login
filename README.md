@@ -1,31 +1,22 @@
 # react_native_social_login
 react native login with google and facebook
 
+> login with facebook // npm  react-native-fbsdk --save
 
-1. login with facebook // npm  react-native-fbsdk --save
- userInfo which is returned after successful facebook sign in.
 {
-  "birthday": ",
-  "email": "",
-  "first_name": "",
-  "gender": "",
-  "id": "",
-  "last_name": "",
-  "name": "fname lname",
-  "picture": {
-    "data": {
-      "height": 50,
-      "is_silhouette": false,
-      "url": "url",
-      "width": 50
-    }
-  }
+        birthday: string,
+        email: string,
+        first_name: string,
+        gender: string,
+        id: string,
+        last_name:string,
+        name:string,
+        picture": {   }
 }
 
-2. login with google // npm @react-native-community/google-signin 
+> login with google // npm @react-native-community/google-signin 
 
- userInfo which is returned after successful google sign in.
-        {
+    {
         idToken: string,
         serverAuthCode: string,
         scopes: Array<string>, // on iOS this is empty array if no additional scopes are defined
@@ -37,7 +28,7 @@ react native login with google and facebook
             photo: string, // url
             name: string // full name
         }
-        }
+    }
 
 ![](https://github.com/coderaudi/react_native_social_login/blob/sociallogin/help/login.PNG)
 
