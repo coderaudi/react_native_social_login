@@ -1,7 +1,7 @@
 
 1. add npm  i react-native-fbsdk --save
 2. link the npm => open cmd //=> react-native link react-native-fbsdk
-
+https://github.com/facebook/react-native-fbsdk
 
 ====cmd ==cmd===cmd
 
