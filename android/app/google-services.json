@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "142496215537",
-    "firebase_url": "https://e-bucket-279718.firebaseio.com",
-    "project_id": "e-bucket-279718",
-    "storage_bucket": "e-bucket-279718.appspot.com"
+    "project_number": "831416916801",
+    "firebase_url": "https://sociallogin-d28dd.firebaseio.com",
+    "project_id": "sociallogin-d28dd",
+    "storage_bucket": "sociallogin-d28dd.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:142496215537:android:edc9849d2a11db5d1b5450",
+        "mobilesdk_app_id": "1:831416916801:android:cb1a19ef8e2aadbce55fc0",
         "android_client_info": {
-          "package_name": "com.espl.ebucket"
+          "package_name": "com.googlelogin"
         }
       },
       "oauth_client": [
         {
-          "client_id": "142496215537-7s74fn0o9cbhq6vd0pgppq2up4u245h1.apps.googleusercontent.com",
+          "client_id": "831416916801-dsjdmli75k8k3dto58smcabgh1icphg7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.googlelogin",
+            "certificate_hash": "92626ad193735b08d360af00d759eea1b673120f"
+          }
+        },
+        {
+          "client_id": "831416916801-7qj8ser4s0uap0f4ecvrdl7tovvhofom.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCXxH23UF7aLEh7_K7K0OzLsXNbFtM1HPg"
+          "current_key": "AIzaSyCI8tNQsjhAhG94sFc1nC2kEodqOkVQVBE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "142496215537-7s74fn0o9cbhq6vd0pgppq2up4u245h1.apps.googleusercontent.com",
+              "client_id": "831416916801-7qj8ser4s0uap0f4ecvrdl7tovvhofom.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

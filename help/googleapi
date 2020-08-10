@@ -1,4 +1,4 @@
-1. go to firebase and create your application 
+1. go to firebase and create your application  ( step 11)
 2. provide all the details and download the google-service.json
 3. add google-service.json to root of andorid/app 
 4. go to npm and install npm i @react-native-community/google-signin --save
@@ -106,3 +106,74 @@ import co.apptailor.googlesignin.RNGoogleSigninPackage;
 cd android
 ./gradlew clean
 now react-native run-android
+
+
+
+13 . create firebase account
+
+
+1. visite https://console.firebase.google.com/ 
+2. add project / ( your project name)
+3. Add Firebase to your Android app ( Get started by adding Firebase to your app click on android icon to generate google-service.json)
+4. enter package name -> android/src/main/res/androidMainfest.xml =>
+    ( on the top there is package name .=>  com.yourprojectname)
+
+
+5. to genereate SHA -1 => cd C:\Program Files\Java\jdk1.8.0_121\bin open cmd
+
+6. run this in cmd =>  keytool -list -v -keystore "%USERPROFILE%\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android    
+
+===cmd====cmd =====cmd
+
+C:\Program Files\Java\jdk1.8.0_171\bin>keytool -list -v -keystore "%USERPROFILE%\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
+Alias name: androiddebugkey
+Creation date: May 5, 2020
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: C=US, O=Android, CN=Android Debug
+Issuer: C=US, O=Android, CN=Android Debug
+Serial number: 1
+Valid from: Tue May 05 12:09:50 IST 2020 until: Thu Apr 28 12:09:50 IST 2050
+Certificate fingerprints:
+         MD5:  21:8C:CD:7E:4A:89:F7:D1:58:CB:5F:FD:5B:DC:76:66
+         SHA1: 92:62:6A:D1:93:73:5B:08:D3:60:AF:00:D7:59:EE:A1:B6:73:12:0F
+         SHA256: B3:40:00:BD:21:41:FF:BB:D3:DE:09:CF:91:55:43:72:A2:51:6D:0D:33:CD:F9:32:88:96:EF:97:C3:DB:7E:BA
+Signature algorithm name: SHA1withRSA
+Subject Public Key Algorithm: 2048-bit RSA key
+
+
+====cmd====cmd====cmd====cmd
+
+
+7. enter your SHA-1 
+
+
+8.In firebase, you will need to enable Google option in SignIn Method section
+9. now take the webclientid and past to your google sign in btn 
+
+ we have errr [Error: A non-recoverable sign in failure occurred]
+
+
+// firebase imps whene error 
+
+
+errors :;    google login error [Error: A non-recoverable sign in failure occurred]
+
+Solved it !!
+I dont know if its a firebase issue. Spent almost two days for this simple issue.
+ADDED THE SUPPORT EMAIL ON FIREBASE AND IT STARTED WORKING
+Firebase or the responsible authority should be informed about this. This is a major thing and it should be solved. It is nowhere mentioned on the documentation. If this could be added
+
+ at troubleshooting info it could save time of many others.
+
+ steps to solve =>
+ -Go to console.developer.google.com
+-Select the project.
+-Go to Credentials.
+-Switch to O Auth Consent screen.
+-Change the app name and fill email id (optional)
+-Save at the bottom
+-Try logging in now and it should work.
+
+this solution from stackoverflow worked for me.
