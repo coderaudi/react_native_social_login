@@ -16,6 +16,13 @@ react native login with google and facebook
 
 > login with google // npm @react-native-community/google-signin 
 
+#GOOGLE SIGN IN WITH FIREBASE 
+
+#VIDEO LINK TO LOGIN WITH GOOGLE IN REACT-NATIVE : https://youtu.be/SdYp5JdMvs0
+#BLOG LINK TO : https://www.pradipdebnath.com/2020/10/06/how-to-implement-google-login-in-react-native-with-firebase/
+
+
+
     {
         idToken: string,
         serverAuthCode: string,
